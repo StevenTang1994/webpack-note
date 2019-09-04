@@ -19,7 +19,9 @@
 - [插件（plugins）](#plugins)
 
 <span id="entry">
+
 ### 入口（entry）
+
 是指`webpack` 在打包项目的时候一个起点文件，可以引用多个入口起点。在进入口之后，会看那些模块、依赖和入口起点的关系，在打包。输出到 bundler
 
 例子：
@@ -30,7 +32,9 @@ module.exports = {
 };
 ```
 <span id="output">
+
 ### 出口（output）
+
 是指`webpack` 在打包之后输出在哪个文件目录下，叫什么名字，默认值为`./dist`
 
 例子:
@@ -47,7 +51,9 @@ module.exports = {
 ```
 
 <span id="loader">
+
 ### loader
+
 可以处理非`javascript`的文件（webpack 自身只理解 JavaScript）,`loader`可以把文件处理成`webpack`能够处理的有效模块。
 
 本质上，webpack loader 将所有类型的文件，转换为应用程序的依赖图（和最终的 bundle）可以直接引用的模块。
@@ -78,6 +84,7 @@ module.exports = config;
 >上面的代码用通俗的语句来说就是：“嘿，webpack 编译器，当你碰到「在 require()/import 语句中被解析为 '.txt' 的路径」时，在你对它打包之前，先使用 raw-loader 转换一下。”
 
 <span id="plugins">
+
 ### 插件(plugins)
 
 loader可以应用各种类型的文件，但是插件的的功能更加的强大。如果你想要引入一个插件需要`require()`,在添加到`plugins `数组里面去
